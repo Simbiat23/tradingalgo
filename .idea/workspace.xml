@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374ec539-4a17-4be4-ba34-3a86c89ad5a3" name="Changes" comment="" />
+    <list default="true" id="374ec539-4a17-4be4-ba34-3a86c89ad5a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/algo/src/main/java/codingblackfemales/algo/AddCancelAlgoLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/algo/src/main/java/codingblackfemales/algo/AddCancelAlgoLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/main/java/codingblackfemales/gettingstarted/MyAlgoLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/main/java/codingblackfemales/gettingstarted/MyAlgoLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/classes/codingblackfemales/gettingstarted/MyAlgoLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/classes/codingblackfemales/gettingstarted/MyAlgoLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/sequencer/target/test-classes/codingblackfemales/sequencer/marketdata/BasicMarketDataSequencerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/sequencer/target/test-classes/codingblackfemales/sequencer/marketdata/BasicMarketDataSequencerTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +26,67 @@
   </component>
   <component name="JavaAutoRunManager">
     <enabled-run-configurations>
-      <run-configuration type="JUnit" name="PassiveAlgoBackTest.testExampleBackTest" />
+      <run-configuration type="JUnit" name="AddCancelAlgoBackTest.testExampleBackTest" />
     </enabled-run-configurations>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000033953694658" />
+      <entry key="S2" value="1.0429261322946757" />
+      <entry key="S5" value="1.2838498727569123" />
+      <entry key="S10" value="1.5327756307836466" />
+      <entry key="S30" value="1.8106861190558743" />
+      <entry key="S60" value="1.9045291466950034" />
+      <entry key="M2" value="2.0407389041747477" />
+      <entry key="M5" value="2.9011107403523724" />
+      <entry key="M10" value="6.797622536535723" />
+      <entry key="M15" value="12.342852178428995" />
+      <entry key="M30" value="27.82638396905738" />
+      <entry key="H1" value="49.014054902220764" />
+      <entry key="H2" value="71.92527308798236" />
+      <entry key="H4" value="91.22412450702826" />
+      <entry key="D1" value="115.01101681627699" />
+      <entry key="W1" value="120.1138781176328" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.1766666872175992E-18" />
+      <entry key="MS500" value="2.594960145128963E-4" />
+      <entry key="S2" value="0.1277022605627731" />
+      <entry key="S5" value="0.5238450070601857" />
+      <entry key="S10" value="1.1427793102441046" />
+      <entry key="S30" value="2.4816630000594833" />
+      <entry key="S60" value="3.1281950618394725" />
+      <entry key="M2" value="3.5483350247598207" />
+      <entry key="M5" value="4.66361607664969" />
+      <entry key="M10" value="8.98346019856129" />
+      <entry key="M15" value="14.348725755496753" />
+      <entry key="M30" value="28.138315844811626" />
+      <entry key="H1" value="45.75470620621937" />
+      <entry key="H2" value="63.56402012969731" />
+      <entry key="H4" value="77.83686190455258" />
+      <entry key="D1" value="94.8080061155672" />
+      <entry key="W1" value="98.38149949888626" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="6.395217238213772E-14" />
+      <entry key="MS500" value="0.0023684278320606172" />
+      <entry key="S2" value="0.3445406656600764" />
+      <entry key="S5" value="1.259201999035678" />
+      <entry key="S10" value="2.303870316054025" />
+      <entry key="S30" value="4.111856187429893" />
+      <entry key="S60" value="4.929366587561713" />
+      <entry key="M2" value="5.532470719457547" />
+      <entry key="M5" value="7.535232137602861" />
+      <entry key="M10" value="15.750593074498461" />
+      <entry key="M15" value="26.656422354193428" />
+      <entry key="M30" value="55.92522996543046" />
+      <entry key="H1" value="94.73225995401906" />
+      <entry key="H2" value="135.4615516322907" />
+      <entry key="H4" value="169.04316640791288" />
+      <entry key="D1" value="209.81526651021954" />
+      <entry key="W1" value="218.49481743413332" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2,
@@ -34,7 +99,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.AddCancelAlgoBackTest.testExampleBackTest.executor": "Run",
+    "JUnit.AddCancelAlgoBackTest.testExampleBackTest.executor": "Debug",
     "JUnit.MyAlgoBackTest.executor": "Run",
     "JUnit.MyAlgoBackTest.testExampleBackTest.executor": "Run",
     "JUnit.MyAlgoTest.executor": "Run",
@@ -49,6 +114,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/CBF Laptop/cbf/codingblackfemales",
@@ -63,7 +129,7 @@
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MyAlgoBackTest.testExampleBackTest">
+  <component name="RunManager" selected="JUnit.AddCancelAlgoBackTest.testExampleBackTest">
     <configuration name="AddCancelAlgoBackTest.testExampleBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backtest" />
       <extension name="coverage">
@@ -146,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddCancelAlgoBackTest.testExampleBackTest" />
         <item itemvalue="JUnit.MyAlgoBackTest.testExampleBackTest" />
         <item itemvalue="JUnit.SniperAlgoBackTest.testExampleBackTest" />
         <item itemvalue="JUnit.PassiveAlgoBackTest.testExampleBackTest" />
         <item itemvalue="JUnit.MyAlgoTest.testDispatchThroughSequencer" />
-        <item itemvalue="JUnit.AddCancelAlgoBackTest.testExampleBackTest" />
       </list>
     </recent_temporary>
   </component>
@@ -273,6 +339,21 @@
           <url>file://$PROJECT_DIR$/algo-coding-exercise/algo/src/main/java/codingblackfemales/algo/SniperAlgoLogic.java</url>
           <line>36</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/algo/src/main/java/codingblackfemales/algo/AddCancelAlgoLogic.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/test/java/codingblackfemales/backtest/AddCancelAlgoBackTest.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/algo/src/main/java/codingblackfemales/algo/AddCancelAlgoLogic.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/test/java/codingblackfemales/backtest/PassiveAlgoBackTest.java</url>
