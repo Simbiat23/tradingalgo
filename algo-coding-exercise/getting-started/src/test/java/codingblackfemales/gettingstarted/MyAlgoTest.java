@@ -78,14 +78,13 @@ public class MyAlgoTest extends AbstractAlgoTest {
 
         encoder.bidBookCount(3)
                 .next().price(101L).size(100L)
-                .next().price(99L).size(200L)
-                .next().price(97L).size(300L);
-
+                .next().price(96L).size(200L)
+                .next().price(95L).size(300L);
 
         encoder.askBookCount(3)
                 .next().price(104L).size(101L)
                 .next().price(109L).size(200L)
-                .next().price(119L).size(5000L);
+                .next().price(119L).size(5600L);
 
 
         encoder.instrumentStatus(InstrumentStatus.CONTINUOUS);
@@ -100,10 +99,15 @@ public class MyAlgoTest extends AbstractAlgoTest {
 
         //create a sample market data tick....
         send(createMyAlgoTick());
+        assertEquals(1, container.getState().getChildOrders().size());
+        assertEquals(1, container.getState().getActiveChildOrders().size());
+
         send(createMyAlgoTick2());
-//
-//        simple assert to check we had 3 orders created
-        assertEquals(container.getState().getChildOrders().size(), 6);
+        assertEquals(1, container.getState().getChildOrders().size());
+        assertEquals(0, container.getState().getActiveChildOrders().size());
+
+
+
     }
 }
 

@@ -31,9 +31,10 @@ public class MyAlgoLogic implements AlgoLogic {
             return NoAction.NoAction;
         }
 
-        final var option = state.getActiveChildOrders().stream().filter(order -> order.getPrice() < level.price).findFirst();
-        if (option.isPresent()) {
-            var activeOrder = option.get();
+        final var activeOrdersNotFilled = state.getActiveChildOrders().stream().filter(order -> order.getSide() == Side.BUY && order.getFilledQuantity() == 0 && order.getPrice() < level.price).findFirst();
+
+        if (activeOrdersNotFilled.isPresent()) {
+            var activeOrder = activeOrdersNotFilled.get();
             logger.info("[MYALGO] Cancelling order:" + activeOrder);
             return new CancelChildOrder(activeOrder);
         }
@@ -66,8 +67,8 @@ public class MyAlgoLogic implements AlgoLogic {
         } else {
             final long price = level.price;
             final long quantity = 55;
-            if (allChildOrder < 1) {
-                logger.info("[MYALGO] Adding order for" + quantity + "@" + price);
+            if (allChildOrder < 4) {
+                logger.info("[MYALGO] Adding order for " + quantity + " @" + price);
                 return new CreateChildOrder(Side.BUY, quantity, price);
             } else {
                 return  NoAction.NoAction;

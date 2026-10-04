@@ -7,7 +7,13 @@
     <list default="true" id="374ec539-4a17-4be4-ba34-3a86c89ad5a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/main/java/codingblackfemales/gettingstarted/MyAlgoLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/main/java/codingblackfemales/gettingstarted/MyAlgoLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/classes/codingblackfemales/gettingstarted/MyAlgoLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/classes/codingblackfemales/gettingstarted/MyAlgoLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/AbstractAlgoBackTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/AbstractAlgoBackTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/AbstractAlgoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/AbstractAlgoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/MyAlgoBackTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/MyAlgoBackTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/MyAlgoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/algo-coding-exercise/getting-started/target/test-classes/codingblackfemales/gettingstarted/MyAlgoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,68 +28,63 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="AddCancelAlgoBackTest.testExampleBackTest" />
-    </enabled-run-configurations>
-  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="8.218763866134432E-15" />
-      <entry key="MS500" value="0.0015239203483260837" />
-      <entry key="S2" value="0.2052119720779389" />
-      <entry key="S5" value="0.6650354088953065" />
-      <entry key="S10" value="1.104994862650351" />
-      <entry key="S30" value="1.789301137283805" />
-      <entry key="S60" value="2.240034633914289" />
-      <entry key="M2" value="2.7885921080086025" />
-      <entry key="M5" value="3.6680708125644697" />
-      <entry key="M10" value="4.215328438245875" />
-      <entry key="M15" value="4.445634580895617" />
-      <entry key="M30" value="4.705755362047735" />
-      <entry key="H1" value="4.854486717829901" />
-      <entry key="H2" value="5.741096427786074" />
-      <entry key="H4" value="14.84349722449954" />
-      <entry key="D1" value="86.57513174111388" />
-      <entry key="W1" value="122.5949793082304" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.0083794601632052E-83" />
+      <entry key="S2" value="2.1169541052839548E-21" />
+      <entry key="S5" value="5.373838087685614E-9" />
+      <entry key="S10" value="7.330658093334522E-5" />
+      <entry key="S30" value="0.042904691577118834" />
+      <entry key="S60" value="0.275799681080943" />
+      <entry key="M2" value="1.2741934468231062" />
+      <entry key="M5" value="5.406640174297323" />
+      <entry key="M10" value="9.663236019687613" />
+      <entry key="M15" value="11.83929999334038" />
+      <entry key="M30" value="14.575798053155482" />
+      <entry key="H1" value="16.409956158697785" />
+      <entry key="H2" value="18.45841004926937" />
+      <entry key="H4" value="24.600627831430636" />
+      <entry key="D1" value="94.4896637423511" />
+      <entry key="W1" value="140.01659490600272" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.000000463798021" />
-      <entry key="MS500" value="1.0541112327432833" />
-      <entry key="S2" value="1.5228253414893498" />
-      <entry key="S5" value="2.025147277270581" />
-      <entry key="S10" value="2.4239447381233314" />
-      <entry key="S30" value="3.248180907552792" />
-      <entry key="S60" value="3.9780813510344206" />
-      <entry key="M2" value="5.108603382188246" />
-      <entry key="M5" value="7.067343927968764" />
-      <entry key="M10" value="8.281269552912025" />
-      <entry key="M15" value="8.788407159976396" />
-      <entry key="M30" value="9.3584889172333" />
-      <entry key="H1" value="9.675029706286203" />
-      <entry key="H2" value="10.51579921715412" />
-      <entry key="H4" value="17.986280833219027" />
-      <entry key="D1" value="74.96877158300254" />
-      <entry key="W1" value="103.21137183913889" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000032482000197" />
+      <entry key="S2" value="1.075493704923818" />
+      <entry key="S5" value="1.3563534266974664" />
+      <entry key="S10" value="1.6208194961524067" />
+      <entry key="S30" value="2.206589744141211" />
+      <entry key="S60" value="2.9539918958905558" />
+      <entry key="M2" value="4.519589761719224" />
+      <entry key="M5" value="8.25819791130948" />
+      <entry key="M10" value="11.175846352890881" />
+      <entry key="M15" value="12.518256148253055" />
+      <entry key="M30" value="14.117928498004131" />
+      <entry key="H1" value="15.305454860203747" />
+      <entry key="H2" value="17.32215949614383" />
+      <entry key="H4" value="23.24035889404786" />
+      <entry key="D1" value="80.74883179045585" />
+      <entry key="W1" value="117.07636406247968" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5133151408452359E-4" />
-      <entry key="MS500" value="0.17849110844388488" />
-      <entry key="S2" value="1.09170657152541" />
-      <entry key="S5" value="2.253359701748089" />
-      <entry key="S10" value="3.2370222892875486" />
-      <entry key="S30" value="4.901515384753816" />
-      <entry key="S60" value="6.135784142451218" />
-      <entry key="M2" value="7.843046925144971" />
-      <entry key="M5" value="10.703335185497554" />
-      <entry key="M10" value="12.477126048403603" />
-      <entry key="M15" value="13.220085966294963" />
-      <entry key="M30" value="14.056713467519335" />
-      <entry key="H1" value="14.525594747517927" />
-      <entry key="H2" value="16.254595470211257" />
-      <entry key="H4" value="32.82690489890683" />
-      <entry key="D1" value="161.54114163008376" />
-      <entry key="W1" value="225.8057927101582" />
+      <entry key="MS100" value="3.0034774385713146E-19" />
+      <entry key="MS500" value="2.0296609049987128E-4" />
+      <entry key="S2" value="0.16693939329793436" />
+      <entry key="S5" value="0.7244567460529466" />
+      <entry key="S10" value="1.2214669226725923" />
+      <entry key="S30" value="2.0814037085938524" />
+      <entry key="S60" value="3.1258916777486285" />
+      <entry key="M2" value="5.71634477944532" />
+      <entry key="M5" value="13.605202883262415" />
+      <entry key="M10" value="20.797271082265176" />
+      <entry key="M15" value="24.325910463529404" />
+      <entry key="M30" value="28.67562981481388" />
+      <entry key="H1" value="31.705571674712363" />
+      <entry key="H2" value="35.77507940285427" />
+      <entry key="H4" value="47.837155117984686" />
+      <entry key="D1" value="175.2356505209401" />
+      <entry key="W1" value="257.09234597413354" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -127,7 +128,7 @@
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AddCancelAlgoBackTest.testExampleBackTest">
+  <component name="RunManager" selected="JUnit.MyAlgoBackTest.testExampleBackTest">
     <configuration name="AddCancelAlgoBackTest.testExampleBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backtest" />
       <extension name="coverage">
@@ -160,6 +161,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyAlgoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="getting-started" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codingblackfemales.gettingstarted.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codingblackfemales.gettingstarted" />
+      <option name="MAIN_CLASS_NAME" value="codingblackfemales.gettingstarted.MyAlgoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyAlgoTest.testDispatchThroughSequencer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="getting-started" />
       <extension name="coverage">
@@ -171,22 +187,6 @@
       <option name="PACKAGE_NAME" value="codingblackfemales.gettingstarted" />
       <option name="MAIN_CLASS_NAME" value="codingblackfemales.gettingstarted.MyAlgoTest" />
       <option name="METHOD_NAME" value="testDispatchThroughSequencer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PassiveAlgoBackTest.testExampleBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backtest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="codingblackfemales.backtest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="codingblackfemales.backtest" />
-      <option name="MAIN_CLASS_NAME" value="codingblackfemales.backtest.PassiveAlgoBackTest" />
-      <option name="METHOD_NAME" value="testExampleBackTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -210,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddCancelAlgoBackTest.testExampleBackTest" />
         <item itemvalue="JUnit.MyAlgoBackTest.testExampleBackTest" />
-        <item itemvalue="JUnit.SniperAlgoBackTest.testExampleBackTest" />
-        <item itemvalue="JUnit.PassiveAlgoBackTest.testExampleBackTest" />
+        <item itemvalue="JUnit.MyAlgoTest" />
         <item itemvalue="JUnit.MyAlgoTest.testDispatchThroughSequencer" />
+        <item itemvalue="JUnit.AddCancelAlgoBackTest.testExampleBackTest" />
+        <item itemvalue="JUnit.SniperAlgoBackTest.testExampleBackTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,18 +255,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java</url>
-          <line>22</line>
+          <line>31</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/main/java/codingblackfemales/orderbook/visitor/CancelOrderVisitor.java</url>
@@ -297,11 +287,6 @@
           <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/test/java/codingblackfemales/backtest/PassiveAlgoBackTest.java</url>
           <line>125</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/test/java/codingblackfemales/backtest/PassiveAlgoBackTest.java</url>
@@ -353,6 +338,11 @@
           <line>33</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/dictionary/target/generated-sources/java/messages/marketdata/BookUpdateEncoder.java</url>
+          <line>514</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/test/java/codingblackfemales/backtest/PassiveAlgoBackTest.java</url>
           <line>118</line>
@@ -365,6 +355,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ClassCircularityError" package="java.lang" />
           <option name="timeStamp" value="35" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="42" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
