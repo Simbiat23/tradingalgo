@@ -24,12 +24,14 @@ public class MyAlgoLogic implements AlgoLogic {
 
         logger.info("[MYALGO] The state of the order book is:\n" + orderBookAsString);
 
+        BidLevel level = state.getBidAt(0);
+
         var allChildOrder = state.getChildOrders().size();
         if (allChildOrder > 4) {
             return NoAction.NoAction;
         }
 
-        final var option = state.getActiveChildOrders().stream().findFirst();
+        final var option = state.getActiveChildOrders().stream().filter(order -> order.getPrice() < level.price).findFirst();
         if (option.isPresent()) {
             var activeOrder = option.get();
             logger.info("[MYALGO] Cancelling order:" + activeOrder);
@@ -62,11 +64,16 @@ public class MyAlgoLogic implements AlgoLogic {
             }
 
         } else {
-            BidLevel level = state.getBidAt(0);
             final long price = level.price;
             final long quantity = 55;
-            logger.info("[MYALGO] Adding order for" + quantity + "@" + price);
-            return new CreateChildOrder(Side.BUY, quantity, price);
+            if (allChildOrder < 1) {
+                logger.info("[MYALGO] Adding order for" + quantity + "@" + price);
+                return new CreateChildOrder(Side.BUY, quantity, price);
+            } else {
+                return  NoAction.NoAction;
+            }
+
+
 
         }
 
