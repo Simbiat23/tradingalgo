@@ -1,7 +1,13 @@
 package codingblackfemales.gettingstarted;
 
 import codingblackfemales.algo.AlgoLogic;
+import messages.marketdata.*;
+import org.agrona.concurrent.UnsafeBuffer;
 import org.junit.Test;
+
+import java.nio.ByteBuffer;
+
+import static org.junit.Assert.assertEquals;
 
 
 /**
@@ -22,14 +28,84 @@ public class MyAlgoTest extends AbstractAlgoTest {
         return new MyAlgoLogic();
     }
 
+    protected UnsafeBuffer createMyAlgoTick(){
+
+        final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
+        final BookUpdateEncoder encoder = new BookUpdateEncoder();
+
+        final ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024);
+        final UnsafeBuffer directBuffer = new UnsafeBuffer(byteBuffer);
+
+        //write the encoded output to the direct buffer
+        encoder.wrapAndApplyHeader(directBuffer, 0, headerEncoder);
+
+        //set the fields to desired values
+        encoder.venue(Venue.LME);
+        encoder.instrumentId(123L);
+
+        encoder.bidBookCount(3)
+                .next().price(98L).size(100L)
+                .next().price(95L).size(200L)
+                .next().price(91L).size(300L);
+
+
+        encoder.askBookCount(3)
+                .next().price(100L).size(101L)
+                .next().price(110L).size(200L)
+                .next().price(115L).size(5000L);
+
+
+        encoder.instrumentStatus(InstrumentStatus.CONTINUOUS);
+        encoder.source(Source.STREAM);
+
+        return directBuffer;
+    }
+
+    protected UnsafeBuffer createMyAlgoTick2(){
+
+        final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
+        final BookUpdateEncoder encoder = new BookUpdateEncoder();
+
+        final ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024);
+        final UnsafeBuffer directBuffer = new UnsafeBuffer(byteBuffer);
+
+        //write the encoded output to the direct buffer
+        encoder.wrapAndApplyHeader(directBuffer, 0, headerEncoder);
+
+        //set the fields to desired values
+        encoder.venue(Venue.LME);
+        encoder.instrumentId(123L);
+
+        encoder.bidBookCount(3)
+                .next().price(101L).size(100L)
+                .next().price(99L).size(200L)
+                .next().price(97L).size(300L);
+
+
+        encoder.askBookCount(3)
+                .next().price(104L).size(101L)
+                .next().price(109L).size(200L)
+                .next().price(119L).size(5000L);
+
+
+        encoder.instrumentStatus(InstrumentStatus.CONTINUOUS);
+        encoder.source(Source.STREAM);
+
+        return directBuffer;
+    }
+
 
     @Test
     public void testDispatchThroughSequencer() throws Exception {
 
         //create a sample market data tick....
-        send(createTick());
-
-        //simple assert to check we had 3 orders created
-        //assertEquals(container.getState().getChildOrders().size(), 3);
+        send(createMyAlgoTick());
+        send(createMyAlgoTick2());
+//
+//        simple assert to check we had 3 orders created
+        assertEquals(container.getState().getChildOrders().size(), 6);
     }
 }
+
+
+
