@@ -31,7 +31,7 @@ public class MyAlgoBackTest extends AbstractAlgoBackTest {
         return new MyAlgoLogic();
     }
 
-    protected UnsafeBuffer createMyAlgoTick() {
+    protected UnsafeBuffer createTickBuyRests() {
 
         final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
         final BookUpdateEncoder encoder = new BookUpdateEncoder();
@@ -64,7 +64,7 @@ public class MyAlgoBackTest extends AbstractAlgoBackTest {
         return directBuffer;
     }
 
-    protected UnsafeBuffer createMyAlgoTick2() {
+    protected UnsafeBuffer createTickAskFillsBuy() {
 
         final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
         final BookUpdateEncoder encoder = new BookUpdateEncoder();
@@ -98,7 +98,7 @@ public class MyAlgoBackTest extends AbstractAlgoBackTest {
         return directBuffer;
     }
 
-    protected UnsafeBuffer createMyAlgoTick3() {
+    protected UnsafeBuffer createTickBidRises() {
 
         final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
         final BookUpdateEncoder encoder = new BookUpdateEncoder();
@@ -131,20 +131,20 @@ public class MyAlgoBackTest extends AbstractAlgoBackTest {
     public void testExampleBackTest() throws Exception {
 
         // Tick 1: buy rests at 98
-        send(createMyAlgoTick());
-        assertEquals(4, container.getState().getChildOrders().size());
-        assertEquals(4, container.getState().getActiveChildOrders().size());
+        send(createTickBuyRests());
+        assertEquals(1, container.getState().getChildOrders().size());
+        assertEquals(1, container.getState().getActiveChildOrders().size());
 
         // Tick 2: ask at 98 fills our buy
-        send(createMyAlgoTick2());
+        send(createTickAskFillsBuy());
         long filledQuantity = container.getState().getChildOrders().stream()
                 .mapToLong(ChildOrder::getFilledQuantity)
                 .sum();
-        assertEquals(220L, filledQuantity);
-        assertEquals(4, container.getState().getActiveChildOrders().size());
+        assertEquals(55L, filledQuantity);
+        assertEquals(1, container.getState().getActiveChildOrders().size());
 
         // Tick 3: best bid 101 is above our buy price of 98, so we sell
-        send(createMyAlgoTick3());
+        send(createTickBidRises());
         long sellOrders = container.getState().getChildOrders().stream()
                 .filter(order -> order.getSide() == Side.SELL)
                 .count();
@@ -152,31 +152,3 @@ public class MyAlgoBackTest extends AbstractAlgoBackTest {
     }
 }
 
-//    @Test
-//    public void testExampleBackTest() throws Exception {
-//        //create a sample market data tick....
-//        send(createMyAlgoTick());
-//
-//
-//        //ADD asserts when you have implemented your algo logic
-////        assertEquals(1, container.getState().getActiveChildOrders().size());
-//
-//        //when: market data moves towards us
-//        send(createMyAlgoTick2());
-//        //then: get the state
-////        var state = container.getState();
-////        System.out.println(state);
-////        assertEquals(3, state.getActiveChildOrders().size());
-////        assertEquals(6, state.getChildOrders().size());
-//
-//        //Check things like filled quantity, cancelled order count etc....
-////        long filledQuantity = state.getChildOrders().stream().map(ChildOrder::getFilledQuantity).reduce(Long::sum).get();
-////        and: check that our algo state was updated to reflect our fills when the market data
-////        assertEquals(225, filledQuantity);
-//        send(createMyAlgoTick3());
-//
-//    }
-//
-//
-//
-//}

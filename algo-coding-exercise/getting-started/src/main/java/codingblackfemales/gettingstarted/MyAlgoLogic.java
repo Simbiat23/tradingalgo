@@ -27,7 +27,7 @@ public class MyAlgoLogic implements AlgoLogic {
         BidLevel level = state.getBidAt(0);
 
         var allChildOrder = state.getChildOrders().size();
-        if (allChildOrder > 4) {
+        if (allChildOrder > 1) {
             return NoAction.NoAction;
         }
 
@@ -67,7 +67,7 @@ public class MyAlgoLogic implements AlgoLogic {
         } else {
             final long price = level.price;
             final long quantity = 55;
-            if (allChildOrder < 4) {
+            if (allChildOrder < 1) {
                 logger.info("[MYALGO] Adding order for " + quantity + " @" + price);
                 return new CreateChildOrder(Side.BUY, quantity, price);
             } else {

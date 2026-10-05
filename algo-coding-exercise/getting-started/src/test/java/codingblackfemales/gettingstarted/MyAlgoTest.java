@@ -28,7 +28,7 @@ public class MyAlgoTest extends AbstractAlgoTest {
         return new MyAlgoLogic();
     }
 
-    protected UnsafeBuffer createMyAlgoTick(){
+    protected UnsafeBuffer createTickBuyRests(){
 
         final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
         final BookUpdateEncoder encoder = new BookUpdateEncoder();
@@ -61,7 +61,7 @@ public class MyAlgoTest extends AbstractAlgoTest {
         return directBuffer;
     }
 
-    protected UnsafeBuffer createMyAlgoTick2(){
+    protected UnsafeBuffer createTickBidRises(){
 
         final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
         final BookUpdateEncoder encoder = new BookUpdateEncoder();
@@ -98,11 +98,11 @@ public class MyAlgoTest extends AbstractAlgoTest {
     public void testDispatchThroughSequencer() throws Exception {
 
         //create a sample market data tick....
-        send(createMyAlgoTick());
+        send(createTickBuyRests());
         assertEquals(1, container.getState().getChildOrders().size());
         assertEquals(1, container.getState().getActiveChildOrders().size());
 
-        send(createMyAlgoTick2());
+        send(createTickBidRises());
         assertEquals(1, container.getState().getChildOrders().size());
         assertEquals(0, container.getState().getActiveChildOrders().size());
 
