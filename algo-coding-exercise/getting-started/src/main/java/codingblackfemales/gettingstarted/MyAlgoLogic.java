@@ -5,7 +5,6 @@ import codingblackfemales.action.CancelChildOrder;
 import codingblackfemales.action.CreateChildOrder;
 import codingblackfemales.action.NoAction;
 import codingblackfemales.algo.AlgoLogic;
-import codingblackfemales.sotw.ChildOrder;
 import codingblackfemales.sotw.SimpleAlgoState;
 import codingblackfemales.sotw.marketdata.BidLevel;
 import codingblackfemales.util.Util;
@@ -17,6 +16,17 @@ public class MyAlgoLogic implements AlgoLogic {
 
     private static final Logger logger = LoggerFactory.getLogger(MyAlgoLogic.class);
 
+    private static final long BUY_QUANTITY = 55;
+    private static final int MAX_TOTAL_ORDERS = 4;
+
+    private long countFilled(SimpleAlgoState state, Side side) {
+        return state.getChildOrders().stream()
+                .filter(order -> order.getSide() == side)
+                .filter(order -> order.getFilledQuantity() > 0)
+                .count();
+    }
+
+
     @Override
     public Action evaluate(SimpleAlgoState state) {
 
@@ -24,36 +34,38 @@ public class MyAlgoLogic implements AlgoLogic {
 
         logger.info("[MYALGO] The state of the order book is:\n" + orderBookAsString);
 
-        BidLevel level = state.getBidAt(0);
+        final BidLevel bestBid = state.getBidAt(0);
+        final int allChildOrder = state.getChildOrders().size();
 
-        var allChildOrder = state.getChildOrders().size();
-        if (allChildOrder > 1) {
+      //Safety cap: stops algo from creating too many orders
+        if (allChildOrder > MAX_TOTAL_ORDERS) {
             return NoAction.NoAction;
         }
 
-        final var activeOrdersNotFilled = state.getActiveChildOrders().stream().filter(order -> order.getSide() == Side.BUY && order.getFilledQuantity() == 0 && order.getPrice() < level.price).findFirst();
+       // Cancel only unfilled buys priced below the best bid
+        // Filled orders stay in the active list so exclude them
+        final var staleBuy = state.getActiveChildOrders().stream()
+                .filter(order -> order.getSide() == Side.BUY)
+                .filter(order -> order.getFilledQuantity() == 0)
+                .filter(order -> order.getPrice() < bestBid.price)
+                .findFirst();
 
-        if (activeOrdersNotFilled.isPresent()) {
-            var activeOrder = activeOrdersNotFilled.get();
+        if (staleBuy.isPresent()) {
+            var activeOrder = staleBuy.get();
             logger.info("[MYALGO] Cancelling order:" + activeOrder);
             return new CancelChildOrder(activeOrder);
         }
 
+        // Checks if orders have more filledBuy than filledSell means we hold something
+        final boolean holdingPosition = countFilled(state, Side.BUY) - countFilled(state, Side.SELL) > 0;
 
-        //Counts how many buy order got filled
-        final var filledBuy = state.getChildOrders().stream().filter(order ->
-                order.getSide() == Side.BUY && order.getFilledQuantity() > 0).count();
-        //Counts how many sell others got filled
-        final var filledSell = state.getChildOrders().stream().filter(order ->
-                order.getSide() == Side.SELL && order.getFilledQuantity() > 0).count();
-//      Checks if orders have more filledBuy than filledSell
-        if (filledBuy - filledSell >  0) {
-            // variable shows the first buy order that has not been sold
-            var filledBuyNotSold = state.getChildOrders().stream().filter(order ->
+        if (holdingPosition) {
+            // first filled buy (doesn't check whether it was already sold)
+            var filledBuy = state.getChildOrders().stream().filter(order ->
                     order.getSide() == Side.BUY && order.getFilledQuantity() > 0).findFirst();
-            if (filledBuyNotSold.isPresent()) {
-                final var bestBid = state.getBidAt(0);
-                final var childOrder = filledBuyNotSold.get();
+            if (filledBuy.isPresent()) {
+                final var childOrder = filledBuy.get();
+                // Sell only at a profit: the best bid must be above what we paid
                 if (childOrder.getPrice() < bestBid.price) {
                     logger.info("[MYALGO] Bought at " + childOrder.getPrice() + ", sell now at " + bestBid.price );
                     return new CreateChildOrder(Side.SELL, childOrder.getQuantity(), bestBid.price);
@@ -65,10 +77,16 @@ public class MyAlgoLogic implements AlgoLogic {
             }
 
         } else {
-            final long price = level.price;
-            final long quantity = 55;
-            if (allChildOrder < 1) {
-                logger.info("[MYALGO] Adding order for " + quantity + " @" + price);
+            // Not holding anything: buy passively at the best bid
+            final long price = bestBid.price;
+            final long quantity = BUY_QUANTITY;
+            final boolean hasRestingBuy = state.getActiveChildOrders().stream()
+                    .filter(order -> order.getSide() == Side.BUY)
+                    .filter(order -> order.getFilledQuantity() == 0)
+                    .findFirst()
+                    .isPresent();
+            if (!hasRestingBuy) {
+                logger.info("[MYALGO] Not holding anything, buying " + quantity + " @ " + price);
                 return new CreateChildOrder(Side.BUY, quantity, price);
             } else {
                 return  NoAction.NoAction;

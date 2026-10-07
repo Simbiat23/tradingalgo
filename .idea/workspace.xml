@@ -28,61 +28,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000183755834335" />
-      <entry key="S5" value="1.0142358122923243" />
-      <entry key="S10" value="1.1563672312485953" />
-      <entry key="S30" value="2.058094614641001" />
-      <entry key="S60" value="2.9495332918328963" />
-      <entry key="M2" value="3.7496297158864236" />
-      <entry key="M5" value="4.4295302147902404" />
-      <entry key="M10" value="4.7013069996205115" />
-      <entry key="M15" value="4.7977350633156455" />
-      <entry key="M30" value="4.897261190156853" />
-      <entry key="H1" value="4.948221690969927" />
-      <entry key="H2" value="4.9746935643776435" />
-      <entry key="H4" value="5.136938818725737" />
-      <entry key="D1" value="45.383091463570324" />
-      <entry key="W1" value="129.0055395581735" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.3331506978339306E-163" />
+      <entry key="S2" value="2.2235256280453304E-41" />
+      <entry key="S5" value="6.375933081625633E-17" />
+      <entry key="S10" value="1.0420490926154534E-8" />
+      <entry key="S30" value="0.003399070495204492" />
+      <entry key="S60" value="0.08565621673366804" />
+      <entry key="M2" value="0.5154019636786323" />
+      <entry key="M5" value="1.990807578739558" />
+      <entry key="M10" value="3.4868275386591625" />
+      <entry key="M15" value="4.37326501926371" />
+      <entry key="M30" value="5.817912713404929" />
+      <entry key="H1" value="7.029597259953267" />
+      <entry key="H2" value="7.900487505690457" />
+      <entry key="H4" value="9.444198212934424" />
+      <entry key="D1" value="59.59055402055622" />
+      <entry key="W1" value="175.76300462150436" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="7.226339656598084E-266" />
-      <entry key="M5" value="3.9665508713833397E-106" />
-      <entry key="M10" value="7.745407885007272E-53" />
-      <entry key="M15" value="4.5504367389507313E-35" />
-      <entry key="M30" value="2.6916934745901584E-17" />
-      <entry key="H1" value="2.113360338112052E-8" />
-      <entry key="H2" value="6.436735880347162E-4" />
-      <entry key="H4" value="0.14166894456127685" />
-      <entry key="D1" value="34.51237812561858" />
-      <entry key="W1" value="103.68880970854853" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000055073293" />
+      <entry key="S30" value="1.0017695053234257" />
+      <entry key="S60" value="1.0452186973542084" />
+      <entry key="M2" value="1.302744974891975" />
+      <entry key="M5" value="2.331946379935273" />
+      <entry key="M10" value="3.4457418128913693" />
+      <entry key="M15" value="4.089935347787" />
+      <entry key="M30" value="5.147941011732042" />
+      <entry key="H1" value="6.131963781425864" />
+      <entry key="H2" value="6.90676169970817" />
+      <entry key="H4" value="7.758706202776568" />
+      <entry key="D1" value="35.36103408747535" />
+      <entry key="W1" value="120.05902312964082" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.531659596170888E-4" />
-      <entry key="MS500" value="0.22313674286824417" />
-      <entry key="S2" value="0.6873068051027196" />
-      <entry key="S5" value="0.8728733727872232" />
-      <entry key="S10" value="1.0719562954517372" />
-      <entry key="S30" value="2.0018252365263494" />
-      <entry key="S60" value="2.90533050001814" />
-      <entry key="M2" value="3.719697831728115" />
-      <entry key="M5" value="4.414766540197368" />
-      <entry key="M10" value="4.693354099700783" />
-      <entry key="M15" value="4.792296977771766" />
-      <entry key="M30" value="4.894471603398032" />
-      <entry key="H1" value="4.946808804563732" />
-      <entry key="H2" value="4.974625990500136" />
-      <entry key="H4" value="5.278227729628325" />
-      <entry key="D1" value="79.89419401233458" />
-      <entry key="W1" value="232.69379784833254" />
+      <entry key="MS100" value="0.0011775467067292582" />
+      <entry key="MS500" value="0.25953481763576425" />
+      <entry key="S2" value="0.713754578485043" />
+      <entry key="S5" value="0.8738151353325834" />
+      <entry key="S10" value="0.9347808073887174" />
+      <entry key="S30" value="0.9824496490530022" />
+      <entry key="S60" value="1.113460005673205" />
+      <entry key="M2" value="1.7954591092475667" />
+      <entry key="M5" value="4.298715548856221" />
+      <entry key="M10" value="6.914176114877646" />
+      <entry key="M15" value="8.448605737334688" />
+      <entry key="M30" value="10.956740097690687" />
+      <entry key="H1" value="13.15626050068088" />
+      <entry key="H2" value="14.80433541991287" />
+      <entry key="H4" value="17.201282402285955" />
+      <entry key="D1" value="94.95028850679508" />
+      <entry key="W1" value="295.821389435194" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -98,7 +98,7 @@
   "keyToString": {
     "JUnit.AddCancelAlgoBackTest.testExampleBackTest.executor": "Debug",
     "JUnit.MyAlgoBackTest.executor": "Run",
-    "JUnit.MyAlgoBackTest.testExampleBackTest.executor": "Debug",
+    "JUnit.MyAlgoBackTest.testExampleBackTest.executor": "Run",
     "JUnit.MyAlgoTest.executor": "Run",
     "JUnit.MyAlgoTest.testDispatchThroughSequencer.executor": "Run",
     "JUnit.PassiveAlgoBackTest.testExampleBackTest.executor": "Run",
@@ -111,8 +111,10 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/CBF Laptop/cbf/codingblackfemales",
     "node.js.detected.package.eslint": "true",
@@ -123,7 +125,8 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "terminal",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.MyAlgoBackTest.testExampleBackTest">
@@ -209,8 +212,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MyAlgoBackTest.testExampleBackTest" />
-        <item itemvalue="JUnit.MyAlgoTest" />
         <item itemvalue="JUnit.MyAlgoTest.testDispatchThroughSequencer" />
+        <item itemvalue="JUnit.MyAlgoTest" />
         <item itemvalue="JUnit.AddCancelAlgoBackTest.testExampleBackTest" />
         <item itemvalue="JUnit.SniperAlgoBackTest.testExampleBackTest" />
       </list>
@@ -336,6 +339,21 @@
           <line>514</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/main/java/codingblackfemales/gettingstarted/MyAlgoLogic.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java</url>
+          <line>185</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/main/java/codingblackfemales/gettingstarted/MyAlgoLogic.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/backtest/src/test/java/codingblackfemales/backtest/PassiveAlgoBackTest.java</url>
           <line>118</line>
@@ -347,12 +365,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/algo-coding-exercise/getting-started/src/test/java/codingblackfemales/gettingstarted/MyAlgoBackTest.java</url>
-          <line>66</line>
-          <properties class="codingblackfemales.gettingstarted.MyAlgoBackTest" method="createTickAskFillsBuy">
+          <line>161</line>
+          <properties class="codingblackfemales.gettingstarted.MyAlgoBackTest" method="testExampleBackTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ClassCircularityError" package="java.lang" />

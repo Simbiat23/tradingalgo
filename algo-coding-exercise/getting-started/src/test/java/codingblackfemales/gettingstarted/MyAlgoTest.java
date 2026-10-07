@@ -1,6 +1,7 @@
 package codingblackfemales.gettingstarted;
 
 import codingblackfemales.algo.AlgoLogic;
+import codingblackfemales.sotw.ChildOrder;
 import messages.marketdata.*;
 import org.agrona.concurrent.UnsafeBuffer;
 import org.junit.Test;
@@ -94,6 +95,7 @@ public class MyAlgoTest extends AbstractAlgoTest {
     }
 
 
+
     @Test
     public void testDispatchThroughSequencer() throws Exception {
 
@@ -103,8 +105,12 @@ public class MyAlgoTest extends AbstractAlgoTest {
         assertEquals(1, container.getState().getActiveChildOrders().size());
 
         send(createTickBidRises());
-        assertEquals(1, container.getState().getChildOrders().size());
-        assertEquals(0, container.getState().getActiveChildOrders().size());
+        assertEquals(2, container.getState().getChildOrders().size());
+        assertEquals(1, container.getState().getActiveChildOrders().size());
+        long replacementPrice = container.getState().getActiveChildOrders().stream()
+                .mapToLong(ChildOrder::getPrice)
+                .findFirst().getAsLong();
+        assertEquals(101L, replacementPrice);
 
 
 
